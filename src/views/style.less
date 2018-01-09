@@ -1,0 +1,133 @@
+li {
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+}
+
+.button {
+  cursor: pointer;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: scale(1.25);
+  margin: 110px 30px;
+  width: 60px;
+  height: 60px;
+  line-height: 2.6;
+  font-size: 24px;
+  color: #e1dada;
+  text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 100px;
+  text-decoration: none;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f4f4f4), color-stop(100%, #e3e3e3));
+  background-image: -moz-gradient(linear, left top, left bottom, color-stop(0%, #f4f4f4), color-stop(100%, #e3e3e3));
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 10px 10px 15px #e3e3e3, -10px 10px 15px #e3e3e3, -15px -15px 15px rgba(255, 255, 255, 0.4), 15px -15px 15px rgba(255, 255, 255, 0.4), inset 0px 2px 0px white;
+  -webkit-transition: box-shadow 0.3s ease-in-out,  background-image 0.3s ease-in-out, text-shadow 0.5s linear, color 0.5s linear;
+  -moz-transition: box-shadow 0.3s ease-in-out,  background-image 0.3s ease-in-out, text-shadow 0.5s linear, color 0.5s linear;
+}
+.button.active {
+  color: #00d0b0;
+  text-shadow: 0px 0px 7px #37ffb1;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e3e3e3), color-stop(100%, #f4f4f4));
+  background-image: -moz-gradient(linear, left top, left bottom, color-stop(0%, #e3e3e3), color-stop(100%, #f4f4f4));
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15), 10px 10px 15px rgba(255, 255, 255, 0.4), -10px 10px 15px rgba(255, 255, 255, 0.4), -10px -10px 15px #e3e3e3, 10px -10px 15px #e3e3e3, inset 0px -3px 0px rgba(255, 255, 255, 0.4), inset 0px 3px 3px rgba(0, 0, 0, 0.04);
+}
+
+
+.router-menu {
+  height: 70px;
+  width: 320px;
+  margin: 15px auto;
+}
+
+.menu-item {
+  cursor: pointer;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: scale(1.25);
+  margin:0 15px;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 16px;
+  text-align: center;
+  color: #e1dada;
+  text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 100px;
+  text-decoration: none;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f4f4f4), color-stop(100%, #e3e3e3));
+  background-image: -moz-gradient(linear, left top, left bottom, color-stop(0%, #f4f4f4), color-stop(100%, #e3e3e3));
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 10px 10px 15px #e3e3e3, -10px 10px 15px #e3e3e3, -15px -15px 15px rgba(255, 255, 255, 0.4), 15px -15px 15px rgba(255, 255, 255, 0.4), inset 0px 2px 0px white;
+  -webkit-transition: box-shadow 0.3s ease-in-out,  background-image 0.3s ease-in-out, text-shadow 0.5s linear, color 0.5s linear;
+  -moz-transition: box-shadow 0.3s ease-in-out,  background-image 0.3s ease-in-out, text-shadow 0.5s linear, color 0.5s linear;
+}
+.menu-item.active {
+  color: #00d0b0;
+  text-shadow: 0px 0px 7px #37ffb1;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e3e3e3), color-stop(100%, #f4f4f4));
+  background-image: -moz-gradient(linear, left top, left bottom, color-stop(0%, #e3e3e3), color-stop(100%, #f4f4f4));
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15), 10px 10px 15px rgba(255, 255, 255, 0.4), -10px 10px 15px rgba(255, 255, 255, 0.4), -10px -10px 15px #e3e3e3, 10px -10px 15px #e3e3e3, inset 0px -3px 0px rgba(255, 255, 255, 0.4), inset 0px 3px 3px rgba(0, 0, 0, 0.04);
+}
+
+.scroll-wrap {
+  width: 600px;
+  height: 800px;
+  border-radius: 5px;
+  overflow-y: auto;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.4);
+  .scroll-content {
+     width: 400px;
+     height: 1500px;
+     margin: 0 auto;
+     .scroll-item {
+       width: 100%;
+       height: 500px;
+       &:first-of-type {
+         background: rgba(120,0,0,0.4);
+       }
+       &:last-of-type {
+         background: rgba(0,120,0,0.4);
+       }
+     }
+  }
+}
+
+
+
+.container{
+    position: fixed;
+    top: 150px;
+    left: 300px;
+    width: 600px;
+    height: 600px;
+    z-index: 99999;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.4);
+}
+.scrollContainer{
+    display: none;
+    transition: all ease 0.5s;
+}
+
+
+.slide1{
+    background-color: rgb(27, 188, 155);
+}
+.slide2{
+    background-color: rgb(255, 153, 0);
+}
+.slide3{
+    background-color: rgb(123, 170, 190);
+}
+.slide4{
+    background-color: rgb(0, 188, 0);
+}
+.slide5{
+    background-color: rgb(255, 0, 0);
+}
+.slide6{
+    background-color: rgb(0, 0, 190);
+}
