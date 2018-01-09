@@ -131,3 +131,79 @@ li a {
 .slide6{
     background-color: rgb(0, 0, 190);
 }
+
+.scroll-wrap {
+  margin: 50px auto;
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  overflow: hidden;
+  position: relative;
+  .scroll-container {
+      width: 1200px;
+      height: 300px;   
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      transition: all ease 0.5s;
+      li {
+         display: inline-block;
+         box-sizing: border-box;
+         margin: 10px;
+         width: 280px;
+         height: 280px;
+         &:first-of-type {
+           border: 2px solid rgba(120,120,0,0.8);
+         }
+         &:nth-of-type(2) {
+            border: 2px solid rgba(0,120,0,0.8);
+         }
+         &:nth-of-type(3) {
+            border: 2px solid rgba(0,120,120,0.8);
+         }
+         &:nth-of-type(4) {
+            border: 2px solid rgba(0,0,120,0.8);
+         }
+      }
+  }
+  .control-container {
+      position: absolute;
+      width: 300px;
+      height: 40px;
+      bottom: 0;
+      background: rgba(0,0,0,0.2);
+      span {
+         position: absolute;
+         top: 5px;
+         width: 0;
+         height: 0;
+         line-height: 40px;
+         text-align: center;
+         font-size: 16px;
+         color: #fff;
+         cursor: pointer;
+      }
+      .scroll-left {
+          border-style:solid;
+          border-width:15px 20px;
+          border-color:transparent;
+          border-right-color: #fff;
+          left: 10px;
+          &.not-active {
+               border-right-color: rgba(0,0,0,0.4);
+                cursor: not-allowed;
+          }
+      }
+      .scroll-right {
+          border-style:solid;
+          border-width:15px 20px;
+          border-color:transparent;
+          right: 10px;
+          border-left-color: #fff;
+           &.not-active {
+               border-left-color: rgba(0,0,0,0.4);
+               cursor: not-allowed;
+          }
+      }
+  }
+}
