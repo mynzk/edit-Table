@@ -10,7 +10,8 @@ import { Provider, connect } from 'react-redux';
 import store from '../store/index';
 import Home from './home';
 import Canvas from './jqcanvas';
-import Login from './login'
+import Login from './login';
+import Echarts from './bar-echarts';
 import './style.less';
 
 
@@ -54,12 +55,16 @@ class Root extends Component{
 				            <li className={`menu-item ${activeKeys.indexOf(3) > -1? 'active' : ''}`} onClick={this.getActive.bind(this, 3)}>
 				               <Link to="/home">Home</Link>
 				            </li>
+                            <li className={`menu-item ${activeKeys.indexOf(4) > -1? 'active' : ''}`} onClick={this.getActive.bind(this, 4)}>
+                                <Link to="/echarts">Echarts</Link>
+                            </li>
 				        </ul>
 						
 					    <Switch>
 					        <Route path="/login" component={Login}/>
 					        <Route path="/canvas" component={Canvas}/>
 					        <Route path="/home" component={Home}/>
+                            <Route path="/echarts" component={Echarts}/>
 					        <Route path="/" component={Home}/>
 					    </Switch>
 				    </div>
