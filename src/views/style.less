@@ -251,3 +251,32 @@ li a {
     }
   }
 }
+
+.follow-wrap {
+  margin: 50px auto;
+  width: 800px;
+  height: 500px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  overflow: hidden;
+  position: relative;
+  .follow-left {
+     position: absolute;
+     box-sizing: border-box;
+     width: 400px;
+     height: 0;
+     border-width: 500px 50px 0 0;
+     border-style: solid solid none none ;
+     border-color: #0ad transparent ;
+  }
+  .follow-right {
+     position: absolute;
+     box-sizing: border-box;
+     left: 350px;
+     width: 450px;
+     height: 0;
+     border-width: 0 0 500px 50px;
+     border-style: none none solid solid;
+     border-color: #ad0 transparent ;
+     
+  }
+}

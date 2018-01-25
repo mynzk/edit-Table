@@ -11,7 +11,8 @@ import store from '../store/index';
 import Home from './home';
 import Canvas from './jqcanvas';
 import Login from './login';
-import Echarts from './bar-echarts';
+//import Echarts from './echarts';
+import Follow from './follow';
 import './style.less';
 
 
@@ -56,7 +57,7 @@ class Root extends Component{
 				               <Link to="/home">Home</Link>
 				            </li>
                             <li className={`menu-item ${activeKeys.indexOf(4) > -1? 'active' : ''}`} onClick={this.getActive.bind(this, 4)}>
-                                <Link to="/echarts">Echarts</Link>
+                                <Link to="/follow">Follow</Link>
                             </li>
 				        </ul>
 						
@@ -64,7 +65,7 @@ class Root extends Component{
 					        <Route path="/login" component={Login}/>
 					        <Route path="/canvas" component={Canvas}/>
 					        <Route path="/home" component={Home}/>
-                            <Route path="/echarts" component={Echarts}/>
+                            <Route path="/follow" component={Follow}/>
 					        <Route path="/" component={Home}/>
 					    </Switch>
 				    </div>
