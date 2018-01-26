@@ -14,41 +14,30 @@ class Follow extends Component{
 
 
 	handleMouseEnter(e){
-
-        if (e.target.className === 'follow-left') {
-        	this.leftNode.style.width = '450px';
-        	this.leftNode.style.transition = 'all 0.3s';
-
-        	this.rightNode.style.width = '400px';
-        	this.rightNode.style.left = '400px';
-        	this.rightNode.style.transition = 'all 0.3s';
+        if (e.target.className === 'left') {
         	
+        	
+        	this.leftNode.style.marginRight = "-50px";
+        	this.leftNode.style.transform = "skew(-5deg) translateZ(50px)"
            
-        } else if (e.target.className === 'follow-right') {
-        	this.rightNode.style.width = '500px';
-        	this.rightNode.style.left = '300px';
-        	this.rightNode.style.transition = 'all 0.3s';
-
-        	this.leftNode.style.width = '350px';
-        	this.leftNode.style.transition = 'all 0.3s';
+        } else if (e.target.className === 'right') {
+        	console.log('right')
+        	this.rightNode.style.marginLeft = "-50px";
+        	this.rightNode.style.transform = "skew(-5deg) translateZ(50px)"
         }
 
     }
 
 	handleMouseLeave(e){
-		if (e.target.className === 'follow-left') {
-			
+		if (e.target.className === 'left') {
+			this.leftNode.style.marginRight = "-20px";
+			this.leftNode.style.transform = "skew(-5deg) translateZ(0)"
             
-        } else if (e.target.className === 'follow-right') {
-            
+        } else if (e.target.className === 'right') {
+            this.rightNode.style.marginLeft = "-20px";
+            this.rightNode.style.transform = "skew(-5deg) translateZ(0)"
         }
 
-        this.leftNode.style.width = '400px';
-    	this.leftNode.style.transition = 'all 0.3s';
-
-    	this.rightNode.style.width = '450px';
-    	this.rightNode.style.left = '350px';
-    	this.rightNode.style.transition = 'all 0.3s';
 	}
 
 	
@@ -58,15 +47,21 @@ class Follow extends Component{
 
 		return(
 			<div className="follow-wrap">
-			   <div className="follow-left"
-			        ref={node => {this.leftNode = node}}  
-			        onMouseEnter={this.handleMouseEnter.bind(this)} 
-			        onMouseLeave={this.handleMouseLeave.bind(this)}>
+			   <div className="follow-left">
+			        <div className="bg-wrapper"  ref={node => {this.leftNode = node}}></div>
+			        <div className="left" 
+			            onMouseEnter={this.handleMouseEnter.bind(this)} 
+			            onMouseLeave={this.handleMouseLeave.bind(this)}>
+			                <h1>hell left</h1>
+			            </div>
 			   </div>
-			   <div className="follow-right" 
-			        ref={node => {this.rightNode = node}} 
-			        onMouseEnter={this.handleMouseEnter.bind(this)} 
-			        onMouseLeave={this.handleMouseLeave.bind(this)}>
+			   <div className="follow-right">
+			         <div className="bg-wrapper" ref={node => {this.rightNode = node}} ></div>
+			         <div className="right"
+			            onMouseEnter={this.handleMouseEnter.bind(this)} 
+				        onMouseLeave={this.handleMouseLeave.bind(this)}>
+				            <h1>hell right</h1>
+				        </div>
 			    </div>
 			</div>
 		)
