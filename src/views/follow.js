@@ -18,10 +18,12 @@ class Follow extends Component{
         	
         	
         	this.leftNode.style.marginRight = "-50px";
-        	this.leftNode.style.transform = "skew(-5deg) translateZ(50px)"
+        	this.leftNode.style.transform = "skew(-5deg) translateZ(50px)";
+        	this.rightNode.style.marginLeft = "10px";
            
         } else if (e.target.className === 'right') {
         	console.log('right')
+        	this.leftNode.style.marginRight = "10px";
         	this.rightNode.style.marginLeft = "-50px";
         	this.rightNode.style.transform = "skew(-5deg) translateZ(50px)"
         }
@@ -31,11 +33,13 @@ class Follow extends Component{
 	handleMouseLeave(e){
 		if (e.target.className === 'left') {
 			this.leftNode.style.marginRight = "-20px";
-			this.leftNode.style.transform = "skew(-5deg) translateZ(0)"
+			this.leftNode.style.transform = "skew(-5deg) translateZ(0)";
+			this.rightNode.style.marginLeft = "-20px";
             
         } else if (e.target.className === 'right') {
             this.rightNode.style.marginLeft = "-20px";
-            this.rightNode.style.transform = "skew(-5deg) translateZ(0)"
+            this.rightNode.style.transform = "skew(-5deg) translateZ(0)";
+            this.leftNode.style.marginRight = "-20px";
         }
 
 	}
@@ -69,3 +73,25 @@ class Follow extends Component{
 }
 
 export default  Follow;
+
+function transDataAddChildren(array){
+    var children = [];
+    if(array == undefined || array.length == 0) return children;
+    deepDataAddChildren(array, children);
+    return children;
+}
+function deepDataAddChildren(array, children){
+    if(array == undefined || array.length == 0) return;
+    children.push({
+        code: array[0].code,
+        value: array[0].value,
+        children: []
+    });
+    array = array.slice(1)
+    deepDataAddChildren(array, children[0].children);
+}
+console.log(transDataAddChildren([{code:1,value:'xiao'},{code:2,value:'xia'},{code:3,value:'x'},{code:4,value:'misomiso'}]))
+
+var arr = [{code:1,value:'xiao'},{code:2,value:'xia'},{code:3,value:'x'},{code:4,value:'misomiso'}];
+var last = arr.splice(1,1);
+console.log(arr.concat(last),'aaa')
