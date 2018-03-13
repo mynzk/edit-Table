@@ -9,7 +9,7 @@ import {
 import { Provider, connect } from 'react-redux';
 import store from '../store/index';
 import Home from './home';
-import Canvas from './jqcanvas';
+import Canvas from './eyescanvas';
 import Login from './login';
 import Echarts from './echarts';
 //import Follow from './follow';
